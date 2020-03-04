@@ -8,7 +8,7 @@ Pull Request: [PR URL] <!-- optional -->
 
 ## Statut
 
-<!-- les statuts sont en anglais : proposed, accepted, refused -->
+<!-- les statuts sont en anglais : proposed/accepted/done/deprecated/superseded -->
 {DATE} proposed
 
 ## Contexte et énoncé du problème

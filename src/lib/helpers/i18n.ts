@@ -19,6 +19,22 @@ export function getI18n () {
         superseded: 'Superseded'
       }
     },
+    fr: {
+      decision: 'Decision',
+      Status: 'Statut',
+      statusStr: 'proposed/accepted/done/deprecated/superseded',
+      modifiedDate: 'Date de dernière modification',
+      lastStatus: 'Dernier statut',
+      logSavePath: 'Save Path:',
+      tocHeader: 'Architecture Decision Records',
+      status: {
+        proposed: 'Proposed',
+        accepted: 'Accepted',
+        done: 'Done',
+        deprecated: 'Deprecated',
+        superseded: 'Superseded'
+      }
+    },
     'zh-cn': {
       decision: '决策',
       Status: '状态',
