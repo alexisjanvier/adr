@@ -7,8 +7,18 @@ import Utils from './utils'
 import { generate } from './generate'
 
 function createDecisions (name: string, savePath: string | any | void) {
+  let raw
+  let templatePath
   let language = Config.getLanguage()
-  let raw = fs.readFileSync(__dirname + path.normalize('/templates/' + language + '.md'), 'utf8')
+  let templateDefaultPath = __dirname + path.normalize('/templates/' + language + '.md')
+  let templateCustomPath = savePath + path.normalize('templates/' + language + '.md')
+  if (fs.existsSync(templateCustomPath)) {
+    templatePath = templateCustomPath;
+    console.log(`Using custom template: ${templatePath}`);
+  } else {
+    templatePath = templateDefaultPath;
+  }
+  raw = fs.readFileSync(templatePath, 'utf8')
   let newDate = Utils.createDateString()
   let fileName = Utils.generateFileName(name)
 
